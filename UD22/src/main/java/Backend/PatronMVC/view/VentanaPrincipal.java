@@ -17,7 +17,7 @@ public class VentanaPrincipal extends JFrame implements ActionListener{
 	private ClienteController ClienteController; //objeto ClienteController que permite la relacion entre esta clase y la clase ClienteController
 	private JTextArea areaIntroduccion;
 	private JLabel labelTitulo, labelSeleccion;
-	private JButton botonRegistrar,botonBuscar;
+	private JButton botonRegistrar,botonBuscar, botonvideos;
 	
 
 	/**
@@ -33,11 +33,14 @@ public class VentanaPrincipal extends JFrame implements ActionListener{
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 
 		botonRegistrar = new JButton();
-		botonRegistrar.setBounds(100, 280, 120, 25);
+		botonRegistrar.setBounds(27, 280, 120, 25);
 		botonRegistrar.setText("Registrar");
 		
+		JButton botonvideos = new JButton("Videos");
+		botonvideos.setBounds(337, 280, 117, 25);
+		
 		botonBuscar = new JButton();
-		botonBuscar.setBounds(240, 280, 120, 25);
+		botonBuscar.setBounds(186, 280, 120, 25);
 		botonBuscar.setText("Buscar");
 
 		labelTitulo = new JLabel();
@@ -67,17 +70,24 @@ public class VentanaPrincipal extends JFrame implements ActionListener{
 
 		botonRegistrar.addActionListener(this);
 		botonBuscar.addActionListener(this);
-		add(botonBuscar);
-		add(botonRegistrar);
-		add(labelSeleccion);
-		add(labelTitulo);
-		add(areaIntroduccion);
+		botonvideos.addActionListener(this);
+		getContentPane().add(botonBuscar);
+		getContentPane().add(botonRegistrar);
+		getContentPane().add(botonvideos);
+		getContentPane().add(labelSeleccion);
+		getContentPane().add(labelTitulo);
+		getContentPane().add(areaIntroduccion);
 	
 		setSize(480, 350);
 		setTitle("Patron de Diseño/MVC");
 		setLocationRelativeTo(null);
 		setResizable(false);
-		setLayout(null);
+		getContentPane().setLayout(null);
+		
+		
+		
+		
+		
 
 	}
 
@@ -94,6 +104,10 @@ public class VentanaPrincipal extends JFrame implements ActionListener{
 		}
 		if (e.getSource()==botonBuscar) {
 			ClienteController.mostrarVentanaConsulta();			
+		}
+		if (e.getSource()==botonvideos) {
+			ClienteController.mostrarVentanaPrincipalVideo();
+			
 		}
 	}
 }

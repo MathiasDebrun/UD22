@@ -10,6 +10,7 @@ import Backend.PatronMVC.model.dto.Cliente;
 import Backend.PatronMVC.model.service.ClienteServ;
 import Backend.PatronMVC.view.VentanaBuscar;
 import Backend.PatronMVC.view.VentanaPrincipal;
+import Backend.PatronMVC.view.VentanaPrincipalVideo;
 import Backend.PatronMVC.view.VentanaRegistro;
 
 
@@ -19,6 +20,7 @@ public class ClienteController {
 	private VentanaPrincipal miVentanaPrincipal;
 	private VentanaRegistro miVentanaRegistro;
 	private VentanaBuscar miVentanaBuscar;
+	private VentanaPrincipalVideo miVentanaPrincipalVideo;
 	
 	//Metodos getter Setters de vistas
 	public VentanaPrincipal getMiVentanaPrincipal() {
@@ -45,13 +47,21 @@ public class ClienteController {
 	public void setClienteServ(ClienteServ ClienteServ) {
 		this.ClienteServ = ClienteServ;
 	}
-	
+	public void setMiVentanaPrincipalVideo (VentanaPrincipalVideo miVentanaPrincipalVideo) {
+		this.miVentanaPrincipalVideo= miVentanaPrincipalVideo;
+	}
+	public VentanaPrincipalVideo getMiVentanaPrincipalVideo (VentanaPrincipalVideo miVentanaPrincipalVideo) {
+		return miVentanaPrincipalVideo;
+	}
 	//Hace visible las vistas de Registro y Consulta
 	public void mostrarVentanaRegistro() {
 		miVentanaRegistro.setVisible(true);
 	}
 	public void mostrarVentanaConsulta() {
 		miVentanaBuscar.setVisible(true);
+	}
+	public void mostrarVentanaPrincipalVideo() {
+		miVentanaPrincipalVideo.setVisible(true);
 	}
 	
 	//Llamadas a los metodos CRUD de la capa service para validar los datos de las vistas

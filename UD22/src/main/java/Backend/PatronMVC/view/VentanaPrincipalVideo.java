@@ -8,12 +8,14 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextArea;
 
+import Backend.PatronMVC.controller.ClienteController;
 import Backend.PatronMVC.controller.VideoController;
 
 public class VentanaPrincipalVideo extends JFrame implements ActionListener {
 	private static final long serialVersionUID = 1L;
 	
-	private VideoController VideoController; //objeto ClienteController que permite la relacion entre esta clase y la clase ClienteController
+	private ClienteController VideoClienteController; //objeto ClienteController que permite la relacion entre esta clase y la clase ClienteController
+	private VideoController VideoController;
 	private JTextArea areaIntroduccion;
 	private JLabel labelTitulo, labelSeleccion;
 	private JButton botonRegistrar,botonBuscar;
@@ -24,13 +26,15 @@ public class VentanaPrincipalVideo extends JFrame implements ActionListener {
 	 */
 	public String textoIntroduccion = "";
 
+	private ClienteController ClienteController;
+
 	/**
 	 * constructor de la clase donde se inicializan todos los componentes
 	 * de la ventana principal
 	 */
 	public VentanaPrincipalVideo() {
 		
-
+		
 		botonRegistrar = new JButton();
 		botonRegistrar.setBounds(100, 280, 120, 25);
 		botonRegistrar.setText("Registrar");
@@ -92,7 +96,7 @@ public class VentanaPrincipalVideo extends JFrame implements ActionListener {
 			VideoController.mostrarVentanaRegistroVideo();			
 		}
 		if (e.getSource()==botonBuscar) {
-			VideoController.mostrarVentanaConsultaVideo();			
-		}
+			VideoController.mostrarVentanaConsultaVideo();	
+	}
 	}
 }

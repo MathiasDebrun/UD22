@@ -49,6 +49,7 @@ public class VideoController {
 			miVentanaBuscarVideo.setVisible(true);
 		}
 		
+		
 		//Llamadas a los metodos CRUD de la capa service para validar los datos de las vistas
 		public void registrarVideo(Video miVideo) {
 			VideoServ.validarRegistro(miVideo);

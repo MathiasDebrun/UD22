@@ -80,6 +80,7 @@ Conexion conex= new Conexion();
             estatuto.setString(2, miVideo.getTitulo());
             estatuto.setString(3, miVideo.getDirector());
             estatuto.setInt(4, miVideo.getId_cliente());
+            estatuto.setInt(5, miVideo.getId());
             estatuto.executeUpdate();
             
           JOptionPane.showMessageDialog(null, " Se ha Modificado Correctamente ","Confirmación",JOptionPane.INFORMATION_MESSAGE);

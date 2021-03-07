@@ -69,10 +69,9 @@ public class mainApp {
 		VideoController.setMiVentanaPrincipalVideo(miVentanaPrincipalVideo);
 		VideoController.setMiVentanaRegistroVideo(miVentanaRegistroVideo);
 		VideoController.setMiVentanaBuscarVideo(miVentanaBuscarVideo);
-		
 		VideoController.setVideoServ(miVideoServ);
-				
-		miVentanaPrincipalVideo.setVisible(true);
+		 miVentanaPrincipalVideo.setVisible(true);
+		
 		
 	}
 

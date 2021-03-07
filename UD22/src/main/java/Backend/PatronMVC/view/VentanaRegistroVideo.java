@@ -35,7 +35,7 @@ public class VentanaRegistroVideo extends JFrame implements ActionListener {
 		botonCancelar.setText("Cancelar");
 
 		labelTitulo = new JLabel();
-		labelTitulo.setText("REGISTRO DE ClienteS");
+		labelTitulo.setText("REGISTRO DE Video");
 		labelTitulo.setBounds(120, 20, 380, 30);
 		labelTitulo.setFont(new java.awt.Font("Verdana", 1, 18));
 
