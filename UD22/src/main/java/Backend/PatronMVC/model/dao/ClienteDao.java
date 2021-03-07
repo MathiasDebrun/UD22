@@ -62,7 +62,7 @@ public class ClienteDao
 				Cliente.setNombreCliente(res.getString("nombre"));
 				Cliente.setApellidoCliente(res.getString("apellido"));
 				Cliente.setDireccionCliente(res.getString("direccion"));
-				Cliente.setDniCliente(Integer.parseInt(res.getString("id")));
+				Cliente.setDniCliente(Integer.parseInt(res.getString("dni")));
 				Cliente.setFechaCliente();
 		
 			 }

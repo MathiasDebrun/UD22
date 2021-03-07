@@ -148,8 +148,8 @@ public class VentanaBuscar  extends JFrame implements ActionListener {
 				Cliente miCliente=new Cliente();
 				miCliente.setIdCliente(Integer.parseInt(textId.getText()));
 				miCliente.setNombreCliente(textNombre.getText());
-				miCliente.setApellidoCliente(Apellido.getText());
-				miCliente.setDireccionCliente(textNombre.getText());
+				miCliente.setApellidoCliente(textapellido.getText());
+				miCliente.setDireccionCliente(textDireccion.getText());
 				miCliente.setDniCliente(Integer.parseInt(textDni.getText()));
 				miCliente.setFechaCliente();
 
@@ -215,10 +215,10 @@ public class VentanaBuscar  extends JFrame implements ActionListener {
 	 */
 	private void muestraCliente(Cliente miCliente) {
 		textNombre.setText(miCliente.getNombreCliente());
-		textDni.setText(miCliente.getDniCliente()+"");
 		textapellido.setText(miCliente.getApellidoCliente()+"");
 		textDireccion.setText(miCliente.getDireccionCliente()+"");
 		textFecha.setText(miCliente.getFechaCliente()+"");
+		textDni.setText(miCliente.getDniCliente()+"");
 		habilita(true, false, false, false, false, true, false, false, true, true);
 	}
 
