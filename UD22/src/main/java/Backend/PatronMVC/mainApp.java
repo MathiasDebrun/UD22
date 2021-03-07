@@ -1,10 +1,15 @@
 package Backend.PatronMVC;
 
 import Backend.PatronMVC.controller.ClienteController;
+import Backend.PatronMVC.controller.VideoController;
 import Backend.PatronMVC.model.service.ClienteServ;
 import Backend.PatronMVC.view.VentanaBuscar;
 import Backend.PatronMVC.view.VentanaPrincipal;
 import Backend.PatronMVC.view.VentanaRegistro;
+import Backend.PatronMVC.model.service.VideoServ;
+import Backend.PatronMVC.view.VentanaBuscarVideo;
+import Backend.PatronMVC.view.VentanaPrincipalVideo;
+import Backend.PatronMVC.view.VentanaRegistroVideo;
 
 public class mainApp {
 	
@@ -47,6 +52,27 @@ public class mainApp {
 		ClienteController.setClienteServ(miClienteServ);
 				
 		miVentanaPrincipal.setVisible(true);
+		
+		miVentanaPrincipalVideo=new VentanaPrincipalVideo();
+		miVentanaRegistroVideo=new VentanaRegistroVideo();
+		VentanaBuscarVideo miVentanaBuscarVideo = new VentanaBuscarVideo();
+		miClienteServVideo=new VideoServ();
+		VideoController= new VideoController();
+		
+		/*Se establecen las relaciones entre clases*/
+		miVentanaPrincipalVideo.setCoordinador(VideoController);
+		miVentanaRegistroVideo.setCoordinador(VideoController);
+		miVentanaBuscarVideo.setCoordinador(VideoController);
+		miClienteServVideo.setclienteController(VideoController);
+		
+		/*Se establecen relaciones con la clase coordinador*/
+		VideoController.setMiVentanaPrincipalVideo(miVentanaPrincipalVideo);
+		VideoController.setMiVentanaRegistro(miVentanaRegistroVideo);
+		VideoController.setMiVentanaBuscarVideo(miVentanaBuscarVideo);
+		VideoController.setVideoServ(miVideoServ);
+				
+		miVentanaPrincipalVideo.setVisible(true);
+		
 	}
 
 }

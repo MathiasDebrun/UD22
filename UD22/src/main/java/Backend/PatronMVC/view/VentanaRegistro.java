@@ -58,12 +58,6 @@ public class VentanaRegistro extends JFrame implements ActionListener{
 		apellido.setBounds(290, 80, 80, 25);
 		getContentPane().add(apellido);
 		
-//
-//		Fecha=new JLabel();
-//		Fecha.setText("Fecha");
-//		Fecha.setBounds(290, 160, 80, 25);
-//		getContentPane().add(Fecha);
-		
 		Dni=new JLabel();
 		Dni.setText("Dni");
 		Dni.setBounds(290, 120, 80, 25);
