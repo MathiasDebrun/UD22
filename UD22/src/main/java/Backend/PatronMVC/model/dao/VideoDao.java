@@ -22,7 +22,7 @@ Conexion conex= new Conexion();
                     +miVideo.getId()+","
                     +"\""+miVideo.getTitulo()+"\","
                     +"\""+miVideo.getDirector()+"\","
-                    +"\""+miVideo.getId_cliente()+"\","
+                    +miVideo.getId_cliente()
                     + ");";
 
 			st.executeUpdate(sql);

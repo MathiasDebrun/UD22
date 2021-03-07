@@ -60,17 +60,17 @@ private static final long serialVersionUID = 1L;
 		getContentPane().add(id);
 		
 		titulo=new JLabel();
-		titulo.setText("Nombre");
+		titulo.setText("Título");
 		titulo.setBounds(20, 120, 80, 25);
 		getContentPane().add(titulo);
 
 		director=new JLabel();
-		director.setText("Apellido");
+		director.setText("Director");
 		director.setBounds(278, 160, 80, 25);
 		getContentPane().add(director);
 		
 		id_cliente=new JLabel();
-		id_cliente.setText("Direccion");
+		id_cliente.setText("Id_Cliente");
 		id_cliente.setBounds(20, 160, 80, 25);
 		getContentPane().add(id_cliente);
 	
@@ -110,10 +110,6 @@ private static final long serialVersionUID = 1L;
 		setLocationRelativeTo(null);
 		setResizable(false);
 		getContentPane().setLayout(null);
-		
-		JLabel fecha = new JLabel("Fecha");
-		fecha.setBounds(278, 85, 70, 15);
-		getContentPane().add(fecha);
 		
 		
 

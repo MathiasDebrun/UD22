@@ -45,17 +45,17 @@ public class VentanaRegistroVideo extends JFrame implements ActionListener {
 		getContentPane().add(id);
 		
 		titulo=new JLabel();
-		titulo.setText("Nombre");
+		titulo.setText("Titulo");
 		titulo.setBounds(20, 120, 80, 25);
 		getContentPane().add(titulo);
 
 		director=new JLabel();
-		director.setText("Apellido");
+		director.setText("Director");
 		director.setBounds(290, 80, 80, 25);
 		getContentPane().add(director);
 		
 		id_cliente=new JLabel();
-		id_cliente.setText("Dni");
+		id_cliente.setText("Id_Cliente");
 		id_cliente.setBounds(290, 120, 80, 25);
 		getContentPane().add(id_cliente);
 		
@@ -73,7 +73,7 @@ public class VentanaRegistroVideo extends JFrame implements ActionListener {
 		
 
 		textid_cliente=new JTextField();
-		textid_cliente.setBounds(340, 120, 80, 25);
+		textid_cliente.setBounds(363, 120, 80, 25);
 		getContentPane().add(textid_cliente);
 		
 		
@@ -95,15 +95,14 @@ public class VentanaRegistroVideo extends JFrame implements ActionListener {
 	private void limpiar() 
 	{
 		textId.setText("");
-		textNombre.setText("");
-		textDni.setText("");
-		textapellido.setText("");
-		textDireccion.setText("");
+		texttitulo.setText("");
+		textdirector.setText("");
+		textid_cliente.setText("");
 	}
 
 
-	public void setCoordinador(ClienteController ClienteController) {
-		this.ClienteController=ClienteController;
+	public void setCoordinador(VideoController VideoController) {
+		this.VideoController=VideoController;
 	}
 
 
@@ -114,14 +113,11 @@ public class VentanaRegistroVideo extends JFrame implements ActionListener {
 		{
 			try {
 				Video miVideo=new Video();
-				miVideo.setIdCliente(Integer.parseInt(textId.getText()));
-				miVideo.setNombreCliente(textNombre.getText());
-				miVideo.setApellidoCliente(textapellido.getText());
-				miVideo.setDniCliente(Integer.parseInt(textDni.getText()));
-				miVideo.setDireccionCliente(textDireccion.getText());
-				miVideo.setFechaCliente();
-				
-				ClienteController.registrarCliente(miCliente);	
+				miVideo.setId(Integer.parseInt(textId.getText()));
+				miVideo.setTitulo(texttitulo.getText());
+				miVideo.setDirector(textdirector.getText());
+				miVideo.setId_cliente(Integer.parseInt(textid_cliente.getText()));
+				VideoController.registrarVideo(miVideo);	
 			} catch (Exception ex) {
 				JOptionPane.showMessageDialog(null,"Error en el Ingreso de Datos","Error",JOptionPane.ERROR_MESSAGE);
 				System.out.println(ex);

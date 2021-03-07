@@ -40,7 +40,7 @@ public class VentanaPrincipalVideo extends JFrame implements ActionListener {
 		botonBuscar.setText("Buscar");
 
 		labelTitulo = new JLabel();
-		labelTitulo.setText("PATRON MODELO VISTA CONTROLADOR");
+		labelTitulo.setText("Ventana Video");
 		labelTitulo.setBounds(60, 40, 380, 30);
 		labelTitulo.setFont(new java.awt.Font("Verdana", 1, 15));
 

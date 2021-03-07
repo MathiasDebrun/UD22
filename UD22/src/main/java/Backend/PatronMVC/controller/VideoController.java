@@ -9,7 +9,7 @@ import Backend.PatronMVC.view.VentanaPrincipal;
 import Backend.PatronMVC.view.VentanaPrincipalVideo;
 import Backend.PatronMVC.view.VentanaRegistro;
 import Backend.PatronMVC.view.VentanaRegistroVideo;
-public class Video {
+public class VideoController {
 	private VideoServ VideoServ;
 	private VentanaPrincipalVideo miVentanaPrincipalVideo;
 	private VentanaRegistroVideo miVentanaRegistroVideo;
@@ -37,7 +37,7 @@ public class Video {
 		public VideoServ getVideoServ() {
 			return VideoServ;
 		}
-		public void setVideoerv(VideoServ VideoServ) {
+		public void setVideoServ(VideoServ VideoServ) {
 			this.VideoServ = VideoServ;
 		}
 		
@@ -45,7 +45,7 @@ public class Video {
 		public void mostrarVentanaRegistroVideo() {
 			miVentanaRegistroVideo.setVisible(true);
 		}
-		public void mostrarVentanaConsulta() {
+		public void mostrarVentanaConsultaVideo() {
 			miVentanaBuscarVideo.setVisible(true);
 		}
 		

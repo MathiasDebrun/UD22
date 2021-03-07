@@ -53,22 +53,23 @@ public class mainApp {
 				
 		miVentanaPrincipal.setVisible(true);
 		
-		miVentanaPrincipalVideo=new VentanaPrincipalVideo();
-		miVentanaRegistroVideo=new VentanaRegistroVideo();
+		VentanaPrincipalVideo miVentanaPrincipalVideo = new VentanaPrincipalVideo();
+		VentanaRegistroVideo miVentanaRegistroVideo = new VentanaRegistroVideo();
 		VentanaBuscarVideo miVentanaBuscarVideo = new VentanaBuscarVideo();
-		miClienteServVideo=new VideoServ();
-		VideoController= new VideoController();
+		VideoServ miVideoServ = new VideoServ();
+		VideoController VideoController = new VideoController();
 		
 		/*Se establecen las relaciones entre clases*/
 		miVentanaPrincipalVideo.setCoordinador(VideoController);
 		miVentanaRegistroVideo.setCoordinador(VideoController);
 		miVentanaBuscarVideo.setCoordinador(VideoController);
-		miClienteServVideo.setclienteController(VideoController);
+		miVideoServ.setVideoController(VideoController);
 		
 		/*Se establecen relaciones con la clase coordinador*/
 		VideoController.setMiVentanaPrincipalVideo(miVentanaPrincipalVideo);
-		VideoController.setMiVentanaRegistro(miVentanaRegistroVideo);
+		VideoController.setMiVentanaRegistroVideo(miVentanaRegistroVideo);
 		VideoController.setMiVentanaBuscarVideo(miVentanaBuscarVideo);
+		
 		VideoController.setVideoServ(miVideoServ);
 				
 		miVentanaPrincipalVideo.setVisible(true);
